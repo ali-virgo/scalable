@@ -1,9 +1,9 @@
 <?php
 // File: config.php
-$host = 'localhost';
-$db = 'insta';
-$user = 'root';
-$pass = '';
+$host = getenv('DB_HOST');
+$username = getenv('DB_USER');
+$password = getenv('DB_PASSWORD');
+$dbname = getenv('DB_NAME');
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
